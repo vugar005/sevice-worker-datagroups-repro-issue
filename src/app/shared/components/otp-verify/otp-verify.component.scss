@@ -1,0 +1,69 @@
+:host {
+    display: block;
+
+}
+
+.component {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    width: calc(var(--loan-request-step-second-width));
+    height: calc(var(--loan-request-step-second-height));
+    padding: var(--loan-request-step-padding);
+    .component__header {
+        display: flex;
+        flex-direction: column;
+        .component__header__title {
+            font-family: 'Montserrat-Medium';
+            font-size: 1.125rem;
+            font-weight: 400;
+            letter-spacing: -0.0112rem;
+            letter-spacing: -0.0112rem;
+        }
+        .component__header__resendOtp {
+            button {
+                font-size: 11px;
+                margin-top: 7px;
+            }
+        }
+        .component__header__subtitle {
+            color: #7f7f7f;
+        }
+    }
+    .component__content {
+        flex:1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .otpVerify {
+            display: flex;
+            flex-direction: column;
+            .otpVerify__fields {
+                display: flex;
+                .otpInput {
+                    text-align: center;
+                    width: 3.9375rem;
+                    margin-right: 0.625rem;
+                }
+            }
+            .otpVerify__error {
+
+            }
+        }
+    }
+    .component__footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 2.9375rem;
+        padding: 0 1.25rem;
+       .component__footer__next {
+           margin-left: auto;
+            button {
+           //     width: 6.25rem;
+            };
+       }
+    }
+}

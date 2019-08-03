@@ -1,0 +1,53 @@
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+  <div class="component">
+    <div class="component__header">
+      <div class="component__header__title">
+        {{'~smsCodeSent' | translate }} ( {{data?.otpObject?.gsm}} ) <br>
+        {{'~pleaseFillCode' | translate }} <br>
+      </div>
+      <div class="component__header__resendOtp">
+          <button mat-raised-button color="accent" [disabled]="!canResendOtp" (click)="sendOtp()">
+              {{'~resend' | translate}}
+              <ng-container *ngIf="resendLeftTime > 0">{{resendLeftTime}} {{'~seconds' | translate}}</ng-container>
+          </button>
+      </div>
+      <div class="component__header__subtitle" *ngIf="data?.otpObject?.channel === 'LOAN'">
+        {{'~step' | translate | titlecase}} 2/4
+      </div>
+    </div>
+    <div class="component__content">
+      <div class="otpVerify">
+        <div class="otpVerify__fields">
+          <mat-form-field appearance="outline" class="otpInput">
+            <input matInput placeholder="*"  type="tel" (keyup)="onKeyUp('first', second, $event)"  (focus)="onFocus('first')" #firstField="matInput"  ngModel name="first"  maxlength="1" required>
+          </mat-form-field>
+
+        <mat-form-field appearance="outline" class="otpInput">
+            <input matInput placeholder="*"  type="tel" (keyup)="onKeyUp('second', third, $event)" (focus)="onFocus('second')" ngModel name="second" #second  maxlength="1" required>
+          </mat-form-field>
+
+        <mat-form-field appearance="outline" class="otpInput">
+            <input matInput placeholder="*"  type="tel" (keyup)="onKeyUp('third', fourth, $event)" (focus)="onFocus('third')" ngModel name="third" #third  maxlength="1" required>
+          </mat-form-field>
+
+        <mat-form-field appearance="outline" class="otpInput">
+            <input matInput placeholder="*"  type="tel" (keyup)="onSubmit()" (focus)="onFocus('fourth')"  ngModel name="fourth" #fourth  maxlength="1" required>
+          </mat-form-field>
+        </div>
+        <div class="otpVerify__error" *ngIf="otpError" class="form-error">
+          * {{'~otpVerifyError' | translate}}
+        </div>
+      </div>
+    </div>
+    <div class="component__footer">
+      <div class="component__footer__back">
+          <button mat-raised-button type="reset"  (click)="onStepBack()">{{'~back' | translate | titlecase}} </button>
+
+      </div>
+      <div class="component__footer__next">
+        <button mat-raised-button color="primary" [disabled]="!f?.valid" #submitBtn type="submit" [ngClass]="{'is-loading': loading}">{{'~next' | translate | titlecase}} </button>
+      </div>
+    </div>
+  </div>
+
+  </form>

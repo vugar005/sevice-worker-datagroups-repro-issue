@@ -1,0 +1,24 @@
+:host {
+    display: block;
+}
+.partner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 4.25rem;
+    height: 75px;
+    padding: 0.9375rem;
+    margin-bottom: 0.625rem;
+    margin-right: 0.9375rem;
+    background: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    transition-property: transform, box-shadow;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    box-shadow: 0 0.125rem 0.3125rem -0.0625rem rgba(0, 0, 0, 0.2);
+    &:hover {
+        box-shadow: 0 1.5625rem 1.25rem rgba(94, 94, 94, 0.15);
+        transform: translateY(-0.3125rem);
+    }
+}

@@ -1,0 +1,73 @@
+:host {
+    display: block;
+    width: 100vw;
+    height: 100%;
+    position: relative;
+  }
+
+  .slide__cover {
+    width: 100vw;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    background-image: url("../../../../../assets/images/PLUSMINUS_HOMEPAGE_BANNER.webp");
+    background-color: var(--primary-default);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    @media (max-width: 576px) {
+    //  background-image: none;
+     // background: var(--primary-default);
+      background-position-x: -1011px;
+      background-position-y: -24px;
+    }
+  }
+
+  .slide {
+    position: relative;
+    height: 300px;
+
+    .slide__content {
+      padding-top: 80px;
+      .slide__content__title {
+        position: relative;
+        z-index: 1;
+        color: #ffffff;
+        font-family: 'Montserrat-SemiBold';
+        font-size: 2.25rem;
+        font-weight: 400;
+        letter-spacing: -0.0675rem;
+      }
+      .slide__content__shortInfo {
+        position: relative;
+        z-index: 1;
+        color: #ffffff;
+        font-family: 'Montserrat-Medium';
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 19.375rem;
+        letter-spacing: -0.0088rem;
+        height: 72px;
+      }
+      .slide__detailed {
+        margin-top: 42px;
+        margin-left: 10.625rem;
+        position: relative;
+        z-index: 1;
+        button {
+          min-width: 170px;
+        border: 1px solid #fff2c2;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .slide {
+      .slide__content {
+        .slide__detailed {
+          margin-top: 30px;
+          margin-left: 7.625rem;
+        }
+      }
+    }
+  }

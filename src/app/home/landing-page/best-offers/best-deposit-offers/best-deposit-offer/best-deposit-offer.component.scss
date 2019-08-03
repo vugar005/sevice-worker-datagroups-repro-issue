@@ -1,0 +1,102 @@
+:host {
+    display: block;
+   // width: 20.9375rem;
+    height: 234px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: #ffffff;
+    width: 100%;
+    height: 100%;
+    box-shadow: none;
+    padding: 20px;
+    border: solid 2px #eaf1fe;
+    margin-right: 0.625rem;
+    position: relative;
+    transition-property: transform, box-shadow;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+    .card__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 17px;
+        background: #ffffff;
+        border-bottom: 1px solid #dddede;
+        .card__header__title {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            font-size: 16px;
+            .card__header__title__logo {
+                width: 145px;
+                max-height: 30px;
+             }
+            .card__header__title__secondary {
+                font-size: 13px;
+                margin-top: 4px;
+           //     color:  var(--secondary-default);
+            }
+        }
+        .card__header__logo {
+            font-size: 26px;
+            color: var(--secondary-default);
+        }
+
+    }
+    .card__content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 17px;
+        .credit-percent {
+            .credit-percent__title {
+              font-family: 'Montserrat-SemiBold';
+                font-size: 1.5rem;
+                white-space: nowrap;
+                span {
+                    font-size: 1.125rem;
+                }
+            }
+            .credit-percent__subtitle {
+                font-family: 'Montserrat-SemiBold';
+                font-size: 12px;
+                margin-top: 2px;
+            }
+        }
+        .credit-count {
+            .credit-count__title {
+                font-family: 'Montserrat-SemiBold';
+                span, b, p {
+                    font-family: 'Montserrat-SemiBold';
+                    font-size:1.125rem;
+                    white-space: nowrap;
+                }
+            }
+            .credit-count__subtitle {
+                margin-top: 2px;
+              span {
+                font-size: 12px;
+              }
+            }
+        }
+    }
+    .card__footer {
+        margin-top: auto;
+    }
+
+&:hover {
+    box-shadow: 0 1.5625rem 1.25rem rgba(94, 94, 94, 0.15);
+    transform: translateY(-0.625rem);
+}
+
+}
+
+@media (max-width: 576px) {
+
+}

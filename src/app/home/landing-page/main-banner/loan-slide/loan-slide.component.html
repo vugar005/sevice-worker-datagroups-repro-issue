@@ -1,0 +1,25 @@
+
+ <div class="slide__cover --loans">
+  <!-- <img src="./assets/images/PLUSMINUS_HOMEPAGE_BANNER.webp" /> -->
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="slide">
+
+          <div class="slide__content">
+            <div class="slide__content__title" >
+                {{'~selectCredits' | translate}}
+            </div>
+            <div class="slide__content__shortInfo" id ="slideLoanShortInfo" >
+              {{'~selectCreditsShortInfo' | translate}}
+            </div>
+            <div class="slide__detailed">
+              <button mat-raised-button (click)="onRequestLoansFromAllBanks()" >{{ '~requestLoan' | translate }}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

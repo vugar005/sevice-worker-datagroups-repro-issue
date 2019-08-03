@@ -1,0 +1,33 @@
+<table class="favorable-rates-table" *ngIf="currency?.rates && currency?.rates[0]?.buy">
+  <thead *ngIf="showThead">
+    <th>{{'~currency' | translate}}</th>
+    <th>{{'~bestBuy' | translate}}</th>
+    <th>{{'~bestSell' | translate}}</th>
+  </thead>
+  <tbody>
+    <tr >
+      <td valign="top"><div class="currencyCode">{{currency.currencyCode}}</div></td>
+
+      <td valign="top">
+         <div class="rate">
+        <div class="rate__value"> {{currency?.rates[0]?.buy?.rate}} <span><i class="fas fa-arrow-down"></i></span></div>
+        <div class="rate__banks">
+            <div class="rate__banks__item" *ngFor="let bank of currency?.rates[0]?.buy?.bankName[0]?.split(',')">
+              {{bank}}
+            </div>
+        </div>
+      </div> </td>
+
+      <td valign="top">
+        <div class="rate">
+        <div class="rate__value"> {{currency?.rates[0]?.sell?.rate}} <span><i class="fas fa-arrow-down"></i></span></div>
+        <div class="rate__banks">
+            <div class="rate__banks__item" *ngFor="let bank of currency?.rates[0]?.sell?.bankName[0]?.split(',')">
+              {{bank}}
+            </div>
+        </div>
+      </div> </td>
+
+    </tr>
+  </tbody>
+</table>

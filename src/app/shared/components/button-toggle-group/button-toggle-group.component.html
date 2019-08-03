@@ -1,0 +1,11 @@
+<div class="component">
+  <div class="component__pagination --left" *ngIf="isOverflown" (click)="onPrev()">
+    <i class="fas fa-angle-left"></i>
+  </div>
+  <div class="component__content" #componentContent>
+    <ng-content> </ng-content>
+  </div>
+  <div class="component__pagination --right" *ngIf="isOverflown" (click)="onNext()">
+    <i class="fas fa-angle-right"></i>
+  </div>
+</div>

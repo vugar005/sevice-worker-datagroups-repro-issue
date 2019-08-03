@@ -1,0 +1,41 @@
+
+<div class="container-overlay">
+
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+        <div class="section">
+            <div class="section__title">{{'~best-offers' | translate}}</div>
+            <div class="section__content">
+                <mat-tab-group [disableRipple]="true" [selectedIndex]="selectedTabIndex" [animationDuration]="'1s'">
+                    <mat-tab label="{{'~loans' | translate}}">
+
+                        <ng-template matTabContent>
+                            <best-credit-offers></best-credit-offers>
+                          </ng-template>
+                    </mat-tab>
+
+                     <mat-tab label="{{'~deposits' | translate}}" >
+                        <ng-template matTabContent>
+                            <best-deposit-offers></best-deposit-offers>
+                          </ng-template>
+                    </mat-tab>
+
+                    <mat-tab label="{{'~credit-cards' | translate}}">
+                      <ng-template matTabContent>
+                          <best-credit-card-offers></best-credit-card-offers>
+                        </ng-template>
+                    </mat-tab>
+
+                    <mat-tab label="{{'~debit-cards' | translate}}">
+                      <ng-template matTabContent>
+                          <best-debit-card-offers></best-debit-card-offers>
+                        </ng-template>
+                    </mat-tab>
+                  </mat-tab-group>
+            </div>
+          </div>
+    </div>
+  </div>
+</div>

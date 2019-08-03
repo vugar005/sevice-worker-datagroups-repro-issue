@@ -1,0 +1,36 @@
+:host {
+  display: block;
+  max-height: 100%;
+  overflow: auto;
+}
+
+.component {
+  display: flex;
+  flex-direction: column;
+
+  .component__header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #949494;
+    .component__header__title {
+       font-size: 13px;
+    }
+    .component__header__icon {
+      cursor: pointer;
+        color: #949494;
+        padding-left: 10px;
+    }
+  }
+
+  .component__content {
+    padding-top: 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 576px) {
+  :host {
+    padding: 20px;
+  }
+}

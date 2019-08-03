@@ -1,0 +1,134 @@
+table.plus-minus {
+  table-layout: fixed;
+  border: 1px solid #e1e1e1;
+  box-shadow: 0.0625rem 0.125rem 0.6875rem 0 rgba(0,0,0,.2);
+    tr, td {
+      text-align: center;
+      transition: background-color 100ms ease-in-out;
+    }
+    td {
+      min-height: 3rem;
+      height: auto;
+    }
+    tr:hover {
+      background-color: #f5f6fa;
+    }
+    th {
+      border: 1px solid #e1e1e1;
+      position: relative;
+      cursor: pointer;
+      vertical-align: top;
+
+      font-size: .75rem;
+      font-weight: 500;
+      height: 3.5rem;
+      padding-bottom: 1.214285rem;
+      padding-top: 1.214285rem;
+
+
+      &.asc {
+        .tableSorting {
+          .tableSorting__arrow.--top {
+             color: var(--secondary-default);
+             animation:blinking 2s infinite;
+
+          }
+        }
+      }
+      &.desc {
+        .tableSorting {
+          .tableSorting__arrow.--down {
+             color: var(--secondary-default);
+              animation:blinking 2s infinite;
+
+          }
+        }
+      }
+      &.--expand {
+        padding: 0;
+        width: 50px;
+        border-right: 0;
+      }
+    }
+    .th-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--primary-default);
+    }
+
+    .td-content {
+      font-size: 13px;
+      // &.--documents {
+      //   font-size: 24px;
+      //   color: #CE1B21;
+      //   cursor: pointer;
+
+      // }
+    }
+  }
+
+  .expand-icon {
+    padding: 0.75rem;
+    padding-top: 0.9375rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--primary-default);
+    transition: transform 300ms ease-in-out;
+
+    &.--top {
+        transform: rotateZ(-180deg);
+    }
+  }
+  .tableSorting {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    .tableSorting__arrow {
+      cursor: pointer;
+      color: rgba(0,0,0,.87);
+      transition: color 200ms ease-in-out;
+      font-size: 21px;
+      color: #dddddd;
+      &.--top {
+        transform: rotateX(180deg);
+
+      }
+      &.--down {
+        margin-top: -12px;
+      }
+      i {
+        line-height: 0.8;
+      }
+
+
+    }
+
+  }
+
+  .row-actions {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    a {
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 13px;
+      color: #ffffff;
+    }
+  }
+  @keyframes blinking{
+    0%{
+      color: #dddddd;
+       }
+    100%{  color: var(--secondary-default)   }
+}

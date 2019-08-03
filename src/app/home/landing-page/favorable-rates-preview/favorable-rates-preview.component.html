@@ -1,0 +1,24 @@
+
+<div class="container-overlay">
+
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+          <div class="section">
+              <div class="section__title">{{'~favorableRate' | translate}}</div>
+              <div class="section__content" *ngIf="rates" >
+                <favorable-rates-preview-table  *ngFor="let rate of rates;let i = index" [currency] = "rate" [index]="i"></favorable-rates-preview-table>
+              </div>
+              <div class="section__footer">
+                <div class="section__footer__date">
+                    <!-- Курс актуален на 14:21:16, 16.04.2019 -->
+                </div>
+                <div class="section__footer__action">
+                   <a routerLink="/home/exchange-rates"> {{'~allCurrencies' | translate}}</a>
+                </div>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>

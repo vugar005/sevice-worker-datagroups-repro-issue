@@ -1,0 +1,18 @@
+:host {
+    display: flex;
+    min-height: 13.125rem;
+    margin: 1.875rem 0;
+    width: 100%;
+    min-height: 280px;
+    overflow: hidden;
+}
+.swiper-slide {
+ width: 340px;
+}
+
+
+@media (max-width: 320px) {
+  .swiper-slide {
+    width: 290px;
+   }
+}

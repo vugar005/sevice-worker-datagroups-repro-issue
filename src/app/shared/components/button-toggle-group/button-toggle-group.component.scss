@@ -1,0 +1,50 @@
+:host {
+    display: block;
+    width: 100%;
+    background: #ffffff;
+}
+
+.component {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    .component__content {
+        flex: 1;
+       // width: calc(100% - 90px);
+        overflow-x: auto;
+    }
+    .component__pagination {
+        width: 48px;
+        height: 37px;
+        font-size: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: relative;
+        color: #7f8c8d;
+        &.--left {
+            border-right: 1px solid #7f8c8d;
+        }
+        &.--right {
+            border-left: 1px solid #7f8c8d;
+        }
+         &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 100%;
+            width: 15px;
+            height: 100%;
+          //  background-image: linear-gradient(90deg,rgba(235,239,240,0),#ebeff0);
+        }
+    }
+}
+
+
+::-webkit-scrollbar
+{
+    height: 0px;
+}
+

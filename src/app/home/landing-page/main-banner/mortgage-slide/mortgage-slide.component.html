@@ -1,0 +1,25 @@
+
+ <div class="slide__cover --mortgage">
+    <!-- <img [src]="slide.coverPhoto" /> -->
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="slide" >
+
+          <div class="slide__content">
+            <div class="slide__content__title" >
+              {{'~mortgage' | translate}}
+            </div>
+            <div class="slide__content__shortInfo">
+              {{'~mortgageBannerMessage' | translate}}
+            </div>
+            <div class="slide__detailed">
+              <a mat-raised-button   routerLink="/home/mortgage">{{ '~compare' | translate }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

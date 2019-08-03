@@ -1,0 +1,211 @@
+#header {
+  display: block;
+  width: 100%;
+  position: relative;
+  top: 0;
+  z-index: var(--header-z-index);
+  background: white;
+  box-shadow: 0 2px 7px 0 rgba(0,0,0,.1);
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 1.625rem;
+    padding-bottom: 1.3125rem;
+    position: relative;
+    .header__icon {
+      height: 2.0625rem;
+      width: 12.5rem;
+      outline: 0;
+      cursor: pointer;
+    }
+    .header__lang-switch {
+      margin-left: 0.8125rem;
+      border-left: 0.0625rem solid #908f8f;
+      padding-left: 0.8125rem;
+      button {
+        font-size:12px;
+      }
+    }
+
+    .header__links {
+      display: flex;
+      margin-left: auto;
+      .header__links__menu {
+        font-size: 18px;
+      }
+
+      .link {
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: -0.0075rem;
+        line-height: 1rem;
+        text-align: center;
+        margin-right: 0.9375rem;
+        cursor: pointer;
+        padding: 0.5rem 0;
+        position: relative;
+        transition: color 300ms ease-in-out;
+        &.disabled {
+          pointer-events: none;
+          color:rgba(0, 0, 0, 0.38);
+        }
+        &.active:after {
+         width: 100%;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          background: var(--primary-default);
+          height: 0.125rem;
+          width: 100%;
+          left: 0;
+          bottom: 0rem;
+          width: 0%;
+          transition: width 300ms ease-in-out;
+        }
+        &:hover:after {
+          width: 100%;
+        }
+      }
+    }
+    .header__loanCompare {
+      position: relative;
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  .lang-switch {
+    width: 3.9375rem;
+  }
+
+}
+
+
+#main-banner {
+  display: block;
+  width: 100vw;
+  height: 300px;
+  position: relative;
+
+  .slide__cover {
+    width: 100vw;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    background-image: url("../../assets/images/PLUSMINUS_HOMEPAGE_BANNER.webp");
+    background-color: var(--primary-default);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    @media (max-width: 576px) {
+    //  background-image: none;
+     // background: var(--primary-default);
+      background-position-x: -1011px;
+      background-position-y: -24px;
+    }
+  }
+
+  .slide {
+    position: relative;
+    height: 300px;
+
+    .slide__content {
+      padding-top: 80px;
+      .slide__content__title {
+        position: relative;
+        z-index: 1;
+        color: #ffffff;
+        font-family: 'Montserrat-SemiBold';
+        font-size: 2.25rem;
+        font-weight: 400;
+        letter-spacing: -0.0675rem;
+      }
+      .slide__content__shortInfo {
+        position: relative;
+        z-index: 1;
+        color: #ffffff;
+        font-family: 'Montserrat-Medium';
+        font-size: 16px;
+        font-weight: 400;
+        max-width: 19.375rem;
+        letter-spacing: -0.0088rem;
+        height: 72px;
+      }
+      .slide__detailed {
+        margin-top: 42px;
+        margin-left: 10.625rem;
+        position: relative;
+        z-index: 1;
+        button {
+          background:#ffffff;
+          height: 38px;
+          min-width: 170px;
+        border: 1px solid #fff2c2;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .slide {
+      .slide__content {
+        .slide__detailed {
+          margin-top: 30px;
+          margin-left: 7.625rem;
+        }
+      }
+    }
+  }
+}
+
+
+#services {
+  display: block;
+  width: 100vw;
+  padding: 4.125rem 0;
+  background-image:url("../../assets/images/our-services-cover.webp");
+  background-size: cover;
+  .service-card {
+    display: flex;
+    align-items: center;
+    background: #fff6d1;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    padding-top: 0.9375rem;
+    padding-bottom: 0.9375rem;
+    margin-bottom: 0.4375rem;
+    margin-right: 0.4375rem;
+    cursor: pointer;
+    outline: 0;
+    transition: box-shadow 300ms ease-in-out;
+    &.disabled {
+      background: rgba(0, 0, 0, 0.12);
+      box-shadow: none!important;
+      pointer-events: none;
+    }
+    &:hover {
+      box-shadow: 0 0.75rem 1.125rem 0.125rem rgba(0, 0, 0, 0.1);
+    }
+    .service-card__icon {
+      // height: 2.1875rem;
+      // width: 2.56rem;
+      width: 41px;
+      height: 35px;
+      margin-right: 1rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .service-card__name {
+      color: #000000;
+      font-family: 'Montserrat-Medium';
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.125rem;
+    }
+  }
+
+}
